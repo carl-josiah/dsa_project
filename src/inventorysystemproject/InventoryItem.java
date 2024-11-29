@@ -44,9 +44,15 @@ public class InventoryItem
         return (price);
     }
 
-    public AList<String> getSuppliers()
+    public String getSuppliers()
     {
-        return (suppliers);
+        StringBuilder supplierList = new StringBuilder();
+
+        for (int i = 1; i <= suppliers.getLength(); i++)
+            supplierList.append(suppliers.getEntry(i)).append(", ");
+        if (!supplierList.isEmpty())
+            supplierList.setLength(supplierList.length() - 2);
+        return (supplierList.toString());
     }
 
     public void setStockQuantity(int stockQuantity)
@@ -66,11 +72,17 @@ public class InventoryItem
     @Override
     public String toString()
     {
+        StringBuilder supplierList = new StringBuilder();
+
+        for (int i = 1; i <= suppliers.getLength(); i++)
+            supplierList.append(suppliers.getEntry(i)).append(", ");
+        if (!supplierList.isEmpty())
+            supplierList.setLength(supplierList.length() - 2);
         return ("ID: " + getId() + "\n" +
                 "Name: " + getName() + "\n" +
                 "Category: " + getCategory() + "\n" +
                 "Stock Quantity: " + getStockQuantity() + "\n" +
                 "Price: " + getPrice() + "\n" +
-                "Suppliers: " + getSuppliers() + "\n");
+                "Suppliers: " + supplierList + "\n");
     }
 }
