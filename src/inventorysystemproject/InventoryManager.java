@@ -56,7 +56,6 @@ public class InventoryManager
             {
                 String key = keyIterator.next();
                 InventoryItem item = items.getValue(key);
-                System.out.println(items.getValue(key));
                 String line = String.format("%s,%s,%s,%d,%.2f,%s",
                         item.getId(),
                         item.getName(),

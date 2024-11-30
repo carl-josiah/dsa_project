@@ -23,7 +23,7 @@ public class DSA_project_InventorySystem
             System.out.println("5. Update item stock quantity");
             System.out.println("6. Display all items");
             System.out.println("7. Exit");
-            System.out.print("Enter your choice:");
+            System.out.println("Enter your choice:");
             int choice = scanner.nextInt();
             scanner.nextLine();
 
