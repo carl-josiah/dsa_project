@@ -49,7 +49,7 @@ public class InventoryItem
         StringBuilder supplierList = new StringBuilder();
 
         for (int i = 1; i <= suppliers.getLength(); i++)
-            supplierList.append(suppliers.getEntry(i)).append(", ");
+            supplierList.append(suppliers.getEntry(i)).append("; ");
         if (!supplierList.isEmpty())
             supplierList.setLength(supplierList.length() - 2);
         return (supplierList.toString());
@@ -80,5 +80,14 @@ public class InventoryItem
                 getPrice(),
                 getSuppliers()
         ));
+    }
+
+    public static void main(String[] args)
+    {
+        InventoryItem item = new InventoryItem("ID-102",
+                "Name", "Category", 5, 10);
+        item.addSuppliers("JONNY KIM");
+        item.addSuppliers("MR DAVIS");
+        System.out.println(item.getSuppliers());
     }
 }
