@@ -82,12 +82,12 @@ public class InventoryItem
         ));
     }
 
-    public static void main(String[] args)
-    {
-        InventoryItem item = new InventoryItem("ID-102",
-                "Name", "Category", 5, 10);
-        item.addSuppliers("JONNY KIM");
-        item.addSuppliers("MR DAVIS");
-        System.out.println(item.getSuppliers());
-    }
+//    public static void main(String[] args)
+//    {
+//        InventoryItem item = new InventoryItem("ID-102",
+//                "Name", "Category", 5, 10);
+//        item.addSuppliers("JONNY KIM");
+//        item.addSuppliers("MR DAVIS");
+//        System.out.println(item.getSuppliers());
+//    }
 }
