@@ -14,8 +14,13 @@ public class InventoryItem
         this.id = id;
         this.name = name;
         this.category = category;
-        this.stockQuantity = stockQuantity;
-        this.price = price;
+        if (stockQuantity > 0)
+            this.stockQuantity = stockQuantity;
+        else
+            this.stockQuantity = 1;
+        if (price >= 0)
+            this.price = price;
+        this.price = 0;
         this.suppliers = new AList<>();
     }
 
