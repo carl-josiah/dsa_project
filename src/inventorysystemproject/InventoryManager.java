@@ -32,12 +32,12 @@ public class InventoryManager
 
     public void removeItem(String id)
     {
-        InventoryItem removedItem = items.remove(id);
+        items.remove(id);
     }
 
     public InventoryItem findItemById(String id)
     {
-        return (null);
+        return(items.getValue(id));
     }
 
     public void updateStockQuantity(String id, int newQuantity)
@@ -84,5 +84,6 @@ public class InventoryManager
         InventoryManager inventoryManager = new InventoryManager("src/inventorysystemproject/item_inventory.csv");
         inventoryManager.addItem(item1);
         inventoryManager.displayAllItems();
+        System.out.println(inventoryManager.findItemById("ID-101"));
     }
 }
